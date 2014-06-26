@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>50E95F57-D1CA-4186-9A95-36D8A129437D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwiftTodo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CE37B37F-1E1B-48F2-8EA4-A8D96BCDBE14</key>
+		<string>https://github.com/lduraes/SwiftSampleTodo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftTodo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CE37B37F-1E1B-48F2-8EA4-A8D96BCDBE14</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lduraes/SwiftSampleTodo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CE37B37F-1E1B-48F2-8EA4-A8D96BCDBE14</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE37B37F-1E1B-48F2-8EA4-A8D96BCDBE14</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftSampleTodo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

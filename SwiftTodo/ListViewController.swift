@@ -9,18 +9,38 @@
 import UIKit
 
 /*
- * Private methods
+ * Action methods
  */
 extension ListViewController {
     
-    func selectorNewTask(sender: UIButton!) {
+    func actionNewTask(sender: UIButton!) {
         let newTaskViewController = NewTaskViewController(nibName: kPushNibName, bundle: nil)
         self.navigationController.pushViewController(newTaskViewController, animated: true)
     }
     
+    func actionRefreshTable() {
+        println("items refreshed")
+        self.refreshControl.endRefreshing()
+        self.tableView.reloadData()
+    }
+    
+}
+
+/*
+ * Private methods
+ */
+extension ListViewController {
+    
     func addButton() {
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "selectorNewTask:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "actionNewTask:")
         self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    func addPullToRefresh() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "actionRefreshTable", forControlEvents: .ValueChanged)
+        self.tableView.addSubview(self.refreshControl)
     }
     
 }
@@ -60,9 +80,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+/*
+ * Lifecycle methods
+ */
 class ListViewController: UIViewController {
 
     @IBOutlet var tableView : UITableView
+    var refreshControl: UIRefreshControl!
     var tasksArray: Task[] = []
     let kCell: String = "task"
     let kTitle: String = "Todo list"
@@ -77,6 +101,7 @@ class ListViewController: UIViewController {
 
         self.title = kTitle
         addButton()
+        addPullToRefresh()
     }
 
 }
